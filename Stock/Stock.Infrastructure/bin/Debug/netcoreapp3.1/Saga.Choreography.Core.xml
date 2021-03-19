@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Saga.Choreography.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Saga.Choreography.Core.Entity.IEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Enums.OrderStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.OrderStatus.Pending">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.OrderStatus.Shipped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.OrderStatus.Failed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.OrderStatus.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Enums.ShipmentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.ShipmentType.MNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Choreography.Core.Enums.ShipmentType.Yurtici">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Extensions.RegisterCoreExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.Extensions.RegisterCoreExtensions.AddCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.Extensions.SwaggerExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.Extensions.SwaggerExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Choreography.Core.Extensions.SwaggerExtensions.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.Mappings.Abstract.IMapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.Mappings.Abstract.IMapping.Map``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.Mappings.Concrete.Mapster.MapsterMapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.Mappings.Concrete.Mapster.MapsterMapping.Map``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Abstract.IEventBus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Abstract.IEventBus.Publish``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Abstract.IEventBus.Subscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Abstract.IEventBus.UnSubscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Abstract.IEventHandler`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Abstract.IEventHandler`1.Consume(`0)">
+            <summary>
+            
+            </summary>
+            <param name="event"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator.ConfigureBus(Saga.Choreography.Core.Settings.Concrete.MassTransitSettings,System.Action{MassTransit.RabbitMqTransport.IRabbitMqBusFactoryConfigurator})">
+            <summary>
+            
+            </summary>
+            <param name="massTransitSettings"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitAdapter`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitAdapter`1.#ctor(Saga.Choreography.Core.MessageBrokers.Abstract.IEventHandler{`0})">
+            <summary>
+            ctor
+            </summary>
+            <param name="eventHandler"></param>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitAdapter`1.Consume(MassTransit.ConsumeContext{`0})">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitEventBus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitEventBus.#ctor(Saga.Choreography.Core.Settings.Concrete.MassTransitSettings,System.IServiceProvider)">
+            <summary>
+            ctor
+            </summary>
+            <param name="massTransitSettings"></param>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitEventBus.Publish``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitEventBus.Subscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.MassTransitEventBus.UnSubscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Models.EventModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Models.EventModel.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.MessageBrokers.Models.EventModel.CorrelationId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.MessageBrokers.Models.EventModel.CreatedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Abstract.ISettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Concrete.OrderDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.OrderDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Concrete.ShipmentDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.ShipmentDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Concrete.StockDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.StockDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.Uri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.TripThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.ActiveThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.ResetInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.RateLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.RateLimiterInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.TrackingPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.MassTransitSettings.MessageRetryCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Choreography.Core.Settings.Concrete.SwaggerSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.SwaggerSettings.VersionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Choreography.Core.Settings.Concrete.SwaggerSettings.RoutePrefix">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

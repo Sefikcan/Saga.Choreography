@@ -1,0 +1,17 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Order.Services.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Order.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Order.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Order.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Saga.Choreography.Shared.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Saga.Choreography.Shared.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\bin\Debug\netcoreapp3.1\Order.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Services\obj\Debug\netcoreapp3.1\Order.Services.pdb

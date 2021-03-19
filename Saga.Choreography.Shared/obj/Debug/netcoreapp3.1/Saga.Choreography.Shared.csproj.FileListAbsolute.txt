@@ -1,0 +1,13 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Shared.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Shared.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Shared.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Shared\obj\Debug\netcoreapp3.1\Saga.Choreography.Shared.pdb

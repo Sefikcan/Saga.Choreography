@@ -1,0 +1,10 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\bin\Debug\netcoreapp3.1\Saga.Choreography.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.pdb
