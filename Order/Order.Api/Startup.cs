@@ -6,9 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Order.Infrastructure.Extensions;
 using Order.Services.Extensions;
 using Saga.Choreography.Core.Extensions;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
-using Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit;
-using Saga.Choreography.Core.Settings.Concrete;
 
 namespace Order.Api
 {
@@ -26,7 +23,7 @@ namespace Order.Api
             services.AddCore(Configuration)
                     .AddSwagger(Configuration)
                     .AddOrder(Configuration)
-                    .AddServices();
+                    .AddServices(Configuration);
 
             services.AddControllers();
         }

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GjB+CCfuG3j9FoCMAvUVnRfNWWqe0S7Hy3xy0oZCeDsulT3NXVHXwVne8oiw+pGpaCybFbz3uDRL1kNICfAkww==",
+  "dgSpecHash": "E9nxGqeOaHhhoidK+WyGwJAewi+KzGCe1vVJBXUIf4t08sJfcApj0StOUAPzTSLyR9entl9WxxPmzw0OyqMEhA==",
   "success": true,
   "projectFilePath": "D:\\WorkSpaces\\Back-end\\Microservices\\Saga.Choreography\\Saga.Choreography.Shared\\Saga.Choreography.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automatonymous\\5.1.1\\automatonymous.5.1.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\easynetq\\6.3.1\\easynetq.6.3.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\greenpipes\\4.0.0\\greenpipes.4.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mapster\\7.1.5\\mapster.7.1.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mapster.core\\1.1.5\\mapster.core.1.1.5.nupkg.sha512",
@@ -20,7 +21,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newid\\3.0.3\\newid.3.0.3.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

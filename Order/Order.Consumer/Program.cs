@@ -1,13 +1,16 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using EasyNetQ;
+using EasyNetQ.AutoSubscribe;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Order.Consumer.Concrete;
 using Order.Consumer.Consumers;
 using Order.Infrastructure.Extensions;
 using Saga.Choreography.Core.Extensions;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
-using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Order;
+using Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.EasyNetQ;
+using Saga.Choreography.Core.Settings.Concrete.MessageBrokers;
 using System;
+using System.Reflection;
 
 namespace Order.Consumer
 {
@@ -19,26 +22,33 @@ namespace Order.Consumer
             Console.ReadKey();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args)
-        {
-            return Host.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
-            {
-                config.AddJsonFile("appsettings.json", true, true);
-                config.AddEnvironmentVariables();
-
-                if (args != null)
-                    config.AddCommandLine(args);
-            })
+        static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddCore(hostContext.Configuration)
                                        .AddOrder(hostContext.Configuration);
 
-                    services.AddTransient<IEventHandler<OrderCompletedEvent>, OrderCompletedConsumer>();
-                    services.AddTransient<IEventHandler<OrderFailedEvent>, OrderFailedConsumer>();
+                    EasyNetQSettings easyNetQSettings = new EasyNetQSettings();
+                    hostContext.Configuration.GetSection(nameof(EasyNetQSettings)).Bind(easyNetQSettings);
+                    services.AddSingleton(easyNetQSettings);
+
+                    var bus = RabbitHutch.CreateBus(easyNetQSettings.Uri);
+                    services.AddSingleton(bus);
+
+                    services.AddSingleton<MessageDispatcher>();
+                    services.AddSingleton(_ =>
+                    {
+                        return new AutoSubscriber(_.GetRequiredService<IBus>(), Assembly.GetExecutingAssembly().GetName().Name)
+                        {
+                            AutoSubscriberMessageDispatcher = _.GetRequiredService<MessageDispatcher>()
+                        };
+                    });
+
+                    services.AddScoped<OrderCompletedConsumer>();
+                    services.AddScoped<OrderFailedConsumer>();
 
                     services.AddHostedService<ConsumeService>();
                 });
-        }
     }
 }

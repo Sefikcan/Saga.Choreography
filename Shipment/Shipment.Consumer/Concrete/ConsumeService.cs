@@ -1,33 +1,23 @@
-﻿using Microsoft.Extensions.Hosting;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
-using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Shipment;
-using Shipment.Consumer.Consumers;
+﻿using EasyNetQ.AutoSubscribe;
+using Microsoft.Extensions.Hosting;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Shipment.Consumer.Concrete
 {
-    public class ConsumeService : IHostedService
+    public class ConsumeService : BackgroundService
     {
-        private readonly IEventBus _eventBus;
+        private readonly AutoSubscriber _autoSubscriber;
 
-        public ConsumeService(IEventBus eventBus)
+        public ConsumeService(AutoSubscriber autoSubscriber)
         {
-            _eventBus = eventBus;
+            _autoSubscriber = autoSubscriber;
         }
 
-        public Task StartAsync(CancellationToken cancellationToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _eventBus.Subscribe<CreateShipmentEvent, CreateShipmentConsumer>();
-
-            return Task.CompletedTask;
-        }
-
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            _eventBus.UnSubscribe<CreateShipmentEvent, CreateShipmentConsumer>();
-
-            return Task.CompletedTask;
+            await _autoSubscriber.SubscribeAsync(new Assembly[] { Assembly.GetExecutingAssembly() }, stoppingToken);
         }
     }
 }

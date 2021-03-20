@@ -153,6 +153,36 @@
             <param name="event"></param>
             <returns></returns>
         </member>
+        <member name="T:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.EasyNetQ.MessageDispatcher">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.EasyNetQ.MessageDispatcher.#ctor(System.IServiceProvider)">
+            <summary>
+            ctor
+            </summary>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.EasyNetQ.MessageDispatcher.Dispatch``2(``0,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TMessage"></typeparam>
+            <typeparam name="TConsumer"></typeparam>
+            <param name="message"></param>
+            <param name="cancellationToken"></param>
+        </member>
+        <member name="M:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.EasyNetQ.MessageDispatcher.DispatchAsync``2(``0,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TMessage"></typeparam>
+            <typeparam name="TConsumer"></typeparam>
+            <param name="message"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
         <member name="T:Saga.Choreography.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator">
             <summary>
             

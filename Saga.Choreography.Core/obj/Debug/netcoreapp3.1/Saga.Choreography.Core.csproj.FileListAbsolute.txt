@@ -8,3 +8,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\ob
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.xml
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Saga.Choreography.Core\obj\Debug\netcoreapp3.1\Saga.Choreography.Core.csprojAssemblyReference.cache

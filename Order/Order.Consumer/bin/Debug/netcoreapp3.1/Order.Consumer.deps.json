@@ -27,6 +27,18 @@
           }
         }
       },
+      "EasyNetQ/6.3.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyNetQ.dll": {
+            "assemblyVersion": "6.3.1.0",
+            "fileVersion": "6.3.1.0"
+          }
+        }
+      },
       "GreenPipes/4.0.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -65,7 +77,7 @@
           "Automatonymous": "5.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.13",
           "NewId": "3.0.3",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "Newtonsoft.Json.Bson": "1.0.1",
           "System.Diagnostics.DiagnosticSource": "4.7.1",
           "System.Reflection.Emit": "4.7.0",
@@ -339,7 +351,7 @@
       "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "5.5.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -371,7 +383,7 @@
       "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "5.5.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
         },
         "runtime": {
@@ -384,7 +396,7 @@
       "Microsoft.IdentityModel.Tokens/5.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.Logging": "5.5.0",
-          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
         "runtime": {
@@ -473,18 +485,18 @@
           }
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.2.21924"
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
           }
         }
       },
       "Newtonsoft.Json.Bson/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
@@ -800,7 +812,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "5.5.0",
           "Microsoft.IdentityModel.Tokens": "5.5.0",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -1458,6 +1470,7 @@
       },
       "Saga.Choreography.Core/1.0.0": {
         "dependencies": {
+          "EasyNetQ": "6.3.1",
           "Mapster": "7.1.5",
           "MassTransit": "7.1.6",
           "MassTransit.RabbitMQ": "7.1.6",
@@ -1490,6 +1503,13 @@
       "sha512": "sha512-Cyzi+JrQ0f2GF9ouy2DptdCPQVGrWSl0oFI//GokvKilgjaffuGd/jm0nZ+iKS1M7aPP2/I2E41216N+pEGAgw==",
       "path": "automatonymous/5.1.1",
       "hashPath": "automatonymous.5.1.1.nupkg.sha512"
+    },
+    "EasyNetQ/6.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WBZxeGj5ivoCA12rnAy4hG12i8FS9mYi9o91+48fJ9Ei2+EOPsZ/6Y+C4z8Q0Rh9dgxC8rsZ2fW1qVd9yGlEUA==",
+      "path": "easynetq/6.3.1",
+      "hashPath": "easynetq.6.3.1.nupkg.sha512"
     },
     "GreenPipes/4.0.0": {
       "type": "package",
@@ -1764,12 +1784,12 @@
       "path": "newid/3.0.3",
       "hashPath": "newid.3.0.3.nupkg.sha512"
     },
-    "Newtonsoft.Json/11.0.2": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
-      "path": "newtonsoft.json/11.0.2",
-      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.1": {
       "type": "package",

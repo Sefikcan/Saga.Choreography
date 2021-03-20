@@ -14,6 +14,19 @@
           "lib/netstandard2.0/Automatonymous.dll": {}
         }
       },
+      "EasyNetQ/6.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "RabbitMQ.Client": "[6.2.1, 6.3.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyNetQ.dll": {}
+        }
+      },
       "GreenPipes/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -549,7 +562,7 @@
           "lib/netstandard2.0/NewId.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2262,6 +2275,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "EasyNetQ": "6.3.1",
           "Mapster": "7.1.5",
           "MassTransit": "7.1.6",
           "MassTransit.RabbitMQ": "7.1.6",
@@ -2308,6 +2322,23 @@
         "automatonymous.nuspec",
         "lib/netstandard2.0/Automatonymous.dll",
         "lib/netstandard2.0/Automatonymous.xml"
+      ]
+    },
+    "EasyNetQ/6.3.1": {
+      "sha512": "WBZxeGj5ivoCA12rnAy4hG12i8FS9mYi9o91+48fJ9Ei2+EOPsZ/6Y+C4z8Q0Rh9dgxC8rsZ2fW1qVd9yGlEUA==",
+      "type": "package",
+      "path": "easynetq/6.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "easynetq.6.3.1.nupkg.sha512",
+        "easynetq.nuspec",
+        "lib/net461/EasyNetQ.dll",
+        "lib/net461/EasyNetQ.pdb",
+        "lib/net461/EasyNetQ.xml",
+        "lib/netstandard2.0/EasyNetQ.dll",
+        "lib/netstandard2.0/EasyNetQ.pdb",
+        "lib/netstandard2.0/EasyNetQ.xml"
       ]
     },
     "GreenPipes/4.0.0": {
@@ -3127,10 +3158,10 @@
         "newid.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3153,8 +3184,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {

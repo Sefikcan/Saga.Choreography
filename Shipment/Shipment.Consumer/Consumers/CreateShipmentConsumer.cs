@@ -1,36 +1,38 @@
-﻿using Saga.Choreography.Core.Enums;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
+﻿using EasyNetQ;
+using EasyNetQ.AutoSubscribe;
+using Saga.Choreography.Core.Enums;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Order;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Shipment;
 using Shipment.Infrastructure.DataAccess.EntityFramework;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Shipment.Consumer.Consumers
 {
-    public class CreateShipmentConsumer : IEventHandler<CreateShipmentEvent>
+    public class CreateShipmentConsumer : IConsumeAsync<CreateShipmentEvent>
     {
         private readonly ShipmentDbContext _dbContext;
-        private readonly IEventBus _eventBus;
+        private readonly IBus _bus;
 
         public CreateShipmentConsumer(ShipmentDbContext dbContext,
-            IEventBus eventBus)
+            IBus bus)
         {
             _dbContext = dbContext;
-            _eventBus = eventBus;
+            _bus = bus;
         }
 
-        public async Task Consume(CreateShipmentEvent context)
+        public async Task ConsumeAsync(CreateShipmentEvent context, CancellationToken cancellationToken)
         {
             if (context.ShipmentType == (int)ShipmentType.MNG || context.ShipmentType == (int)ShipmentType.Yurtici)
             {
-                await _eventBus.Publish(new OrderCompletedEvent 
+                await _bus.PubSub.PublishAsync(new OrderCompletedEvent 
                 {
                     OrderId = context.OrderId
                 });
             }
             else
             {
-                await _eventBus.Publish(new OrderFailedEvent
+                await _bus.PubSub.PublishAsync(new OrderFailedEvent
                 {
                     OrderId = context.OrderId
                 });

@@ -84,3 +84,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Api\obj\Debug
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Api\obj\Debug\netcoreapp3.1\Order.Api.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Api\obj\Debug\netcoreapp3.1\Order.Api.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Api\obj\Debug\netcoreapp3.1\Order.Api.genruntimeconfig.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Api\bin\Debug\netcoreapp3.1\EasyNetQ.dll

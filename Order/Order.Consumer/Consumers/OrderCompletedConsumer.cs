@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EasyNetQ.AutoSubscribe;
+using Microsoft.EntityFrameworkCore;
 using Order.Infrastructure.DataAccess.EntityFramework;
 using Saga.Choreography.Core.Enums;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Order;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Order.Consumer.Consumers
 {
-    public class OrderCompletedConsumer : IEventHandler<OrderCompletedEvent>
+    public class OrderCompletedConsumer : IConsumeAsync<OrderCompletedEvent>
     {
         private readonly OrderDbContext _dbContext;
 
@@ -16,7 +17,7 @@ namespace Order.Consumer.Consumers
             _dbContext = dbContext;
         }
 
-        public async Task Consume(OrderCompletedEvent context)
+        public async Task ConsumeAsync(OrderCompletedEvent context, CancellationToken cancellationToken)
         {
             var order = await _dbContext.Orders.FirstOrDefaultAsync(x => x.Id == context.OrderId);
             if (order == null)
