@@ -1,10 +1,10 @@
-﻿using MediatR;
+﻿using EasyNetQ;
+using MediatR;
 using Order.Infrastructure.DataAccess.EntityFramework;
 using Order.Services.DTO.Request;
 using Order.Services.DTO.Response;
 using Saga.Choreography.Core.Enums;
 using Saga.Choreography.Core.Mappings.Abstract;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Stock;
 using System;
 using System.Threading;
@@ -26,15 +26,15 @@ namespace Order.Services.Commands
     {
         private readonly OrderDbContext _dbContext;
         private readonly IMapping _mapping;
-        private readonly IEventBus _eventBus;
+        private readonly IBus _bus;
 
         public CreateOrderCommandHandler(OrderDbContext dbContext,
             IMapping mapping,
-            IEventBus eventBus)
+            IBus bus)
         {
             _dbContext = dbContext;
             _mapping = mapping;
-            _eventBus = eventBus;
+            _bus = bus;
         }
 
         public async Task<CreateOrderResponseModel> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
@@ -46,7 +46,7 @@ namespace Order.Services.Commands
 
             if (await _dbContext.SaveChangesAsync() > 0)
             {
-                await _eventBus.Publish(new UpdateStockEvent
+                await _bus.PubSub.PublishAsync(new UpdateStockEvent
                 {
                     CorrelationId = Guid.NewGuid(),
                     ProductId = order.ProductId,

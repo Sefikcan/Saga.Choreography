@@ -1,32 +1,34 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EasyNetQ;
+using EasyNetQ.AutoSubscribe;
+using Microsoft.EntityFrameworkCore;
 using Saga.Choreography.Core.Enums;
-using Saga.Choreography.Core.MessageBrokers.Abstract;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Order;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Shipment;
 using Saga.Choreography.Shared.MessageBrokers.Consumers.Models.Stock;
 using Stock.Infrastructure.DataAccess.EntityFramework;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Stock.Consumer.Consumers
 {
-    public class UpdateStockConsumer : IEventHandler<UpdateStockEvent>
+    public class UpdateStockConsumer : IConsumeAsync<UpdateStockEvent>
     {
         private readonly StockDbContext _dbContext;
-        private readonly IEventBus _eventBus;
+        private readonly IBus _bus;
 
-        public UpdateStockConsumer(StockDbContext dbContext, IEventBus eventBus)
+        public UpdateStockConsumer(StockDbContext dbContext, IBus bus)
         {
             _dbContext = dbContext;
-            _eventBus = eventBus;
+            _bus = bus;
         }
 
-        public async Task Consume(UpdateStockEvent context)
+        public async Task ConsumeAsync(UpdateStockEvent context, CancellationToken cancellationToken)
         {
             var stock = await _dbContext.Stocks.FirstOrDefaultAsync(x => x.ProductId == context.ProductId);
             if (stock == null)
             {
-                await _eventBus.Publish(new OrderFailedEvent
+                await _bus.PubSub.PublishAsync(new OrderFailedEvent
                 {
                     OrderId = context.OrderId
                 });
@@ -37,7 +39,7 @@ namespace Stock.Consumer.Consumers
             stock.Quantity -= context.Quantity;
             if (stock.Quantity < 0)
             {
-                await _eventBus.Publish(new OrderFailedEvent
+                await _bus.PubSub.PublishAsync(new OrderFailedEvent
                 {
                     OrderId = context.OrderId
                 });
@@ -50,7 +52,7 @@ namespace Stock.Consumer.Consumers
 
             if (await _dbContext.SaveChangesAsync() > 0)
             {
-                await _eventBus.Publish(new CreateShipmentEvent
+                await _bus.PubSub.PublishAsync(new CreateShipmentEvent
                 {
                     ShipmentType = (int)ShipmentType.MNG,
                     OrderId = context.OrderId

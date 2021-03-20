@@ -82,3 +82,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Stock\Stock.Api\obj\Debug
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Stock\Stock.Api\obj\Debug\netcoreapp3.1\Stock.Api.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Stock\Stock.Api\obj\Debug\netcoreapp3.1\Stock.Api.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Stock\Stock.Api\obj\Debug\netcoreapp3.1\Stock.Api.genruntimeconfig.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Stock\Stock.Api\bin\Debug\netcoreapp3.1\EasyNetQ.dll

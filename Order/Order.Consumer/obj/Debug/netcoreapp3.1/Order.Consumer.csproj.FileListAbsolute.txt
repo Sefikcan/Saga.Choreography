@@ -74,3 +74,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Consumer\obj\
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Consumer\obj\Debug\netcoreapp3.1\Order.Consumer.genruntimeconfig.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Consumer\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Consumer\bin\Debug\netcoreapp3.1\appsettings.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Order\Order.Consumer\bin\Debug\netcoreapp3.1\EasyNetQ.dll

@@ -74,3 +74,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Shipment\Shipment.Consume
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.genruntimeconfig.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\appsettings.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Choreography\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\EasyNetQ.dll
